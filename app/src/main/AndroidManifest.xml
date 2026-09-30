@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/sipeka_app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+        <!--  Halaman pertama yang dibuka: Login SIPEKA  -->
+        <activity android:name=".LoginActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".DashboardActivity" android:exported="false"/>
+        <!--  Sisa project lama (Tango), bukan launcher lagi. Boleh dihapus jika tidak dipakai  -->
+        <activity android:name=".MainActivity" android:exported="false"/>
+        <activity android:name=".DetailSnackActivity" android:exported="false" android:parentActivityName=".MainActivity"/>
+    </application>
+</manifest>

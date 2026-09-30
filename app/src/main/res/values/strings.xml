@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TNS-Tango</string>
+    <string name="btn_my_project">My Project</string>
+    <string name="main_title">Selamat Datang di App Snack</string>
+    <string name="main_subtitle">Klik tombol di bawah untuk melihat informasi detail snack.</string>
+
+    <!-- Detail Snack Data -->
+    <string name="snack_name">Tango Wafer Cokelat</string>
+    <string name="snack_description">Wafer renyah ciptaan Master Chef Tango dengan lapisan krim cokelat lezat yang tebal di setiap tumpukannya.</string>
+    <string name="nutrition_title">Komposisi &amp; Informasi Gizi</string>
+    <string name="nutrition_details">• Lemak Total: 6g\n• Protein: 2g\n• Karbohidrat Total: 17g\n• Gula: 8g\n• Garam (Natrium): 45mg</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <color name="sipeka_primary_dark">#063D30</color>
+    <color name="sipeka_primary">#0F7A5C</color>
+    <color name="sipeka_accent">#B6F23C</color>
+    <color name="sipeka_surface">#F0F5F3</color>
+    <color name="sipeka_text_secondary">#5B6B66</color>
+    <color name="sipeka_badge_bg">#DDF5EA</color>
+    <color name="sipeka_white">#FFFFFF</color>
+</resources>

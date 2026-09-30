@@ -1,0 +1,16 @@
+<resources>
+    <string name="sipeka_app_name">SIPEKA</string>
+    <string name="sipeka_tagline">Smart Payroll Ecosystem</string>
+    <string name="sipeka_secure_login">🔒 Secure Login Access</string>
+    <string name="sipeka_welcome_title">Selamat Datang\nAdmin SIPEKA</string>
+    <string name="sipeka_welcome_desc">Masukkan username dan password untuk mengakses dashboard sistem payroll.</string>
+    <string name="sipeka_hint_username">Username / Email</string>
+    <string name="sipeka_hint_password">Password</string>
+    <string name="sipeka_remember_me">Ingat saya</string>
+    <string name="sipeka_btn_login">Masuk ke Dashboard </string>
+    <string name="sipeka_footer">SIPEKA System • Teknik Informatika PCR</string>
+    <string name="sipeka_err_username_kosong">Username tidak boleh kosong</string>
+    <string name="sipeka_err_password_kosong">Password tidak boleh kosong</string>
+    <string name="sipeka_err_login_gagal">Username atau password salah</string>
+    <string name="sipeka_dashboard_placeholder">Dashboard SIPEKA (segera dibuat)</string>
+</resources>
