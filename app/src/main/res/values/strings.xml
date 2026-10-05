@@ -1,12 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TNS-Tango</string>
-    <string name="btn_my_project">My Project</string>
-    <string name="main_title">Selamat Datang di App Snack</string>
-    <string name="main_subtitle">Klik tombol di bawah untuk melihat informasi detail snack.</string>
+    <!-- Nama dan judul aplikasi -->
+    <string name="app_title">SIPEKA Mobile</string>
+    <string name="sipeka_app_name">SIPEKA</string>
+    <string name="sipeka_tagline">Smart Payroll Ecosystem</string>
 
-    <!-- Detail Snack Data -->
-    <string name="snack_name">Tango Wafer Cokelat</string>
-    <string name="snack_description">Wafer renyah ciptaan Master Chef Tango dengan lapisan krim cokelat lezat yang tebal di setiap tumpukannya.</string>
-    <string name="nutrition_title">Komposisi &amp; Informasi Gizi</string>
-    <string name="nutrition_details">• Lemak Total: 6g\n• Protein: 2g\n• Karbohidrat Total: 17g\n• Gula: 8g\n• Garam (Natrium): 45mg</string>
+    <!-- Halaman awal (MainActivity) -->
+    <string name="main_badge">Untuk Petani Sawit</string>
+    <string name="main_welcome">Selamat datang di SIPEKA Mobile</string>
+    <string name="main_desc">Hitung upah panen sawit otomatis, jujur, dan transparan. Tetap jalan walau tanpa sinyal.</string>
+    <string name="btn_main_login">Masuk ke Aplikasi</string>
+    <string name="btn_main_web">Website Sawit</string>
+    <string name="btn_main_about">Tentang Aplikasi</string>
+    <string name="main_footer">SIPEKA Mobile • Teknik Informatika PCR</string>
+    <string name="cd_logo">Logo SIPEKA</string>
+    <string name="cd_petani">Ilustrasi petani sawit memegang ponsel</string>
+
+    <!-- Judul Toolbar tiap halaman (kecuali MainActivity) -->
+    <string name="title_login">Login SIPEKA</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_web">Website Sawit</string>
+    <string name="title_about">Tentang SIPEKA</string>
+
+    <!-- Login (UC01) -->
+    <string name="sipeka_secure_login">🔒 Secure Login Access</string>
+    <string name="sipeka_welcome_title">Selamat Datang\nAdmin SIPEKA</string>
+    <string name="sipeka_welcome_desc">Masukkan username dan password untuk mengakses dashboard sistem payroll.</string>
+    <string name="sipeka_hint_username">Username / Email</string>
+    <string name="sipeka_hint_password">Password</string>
+    <string name="sipeka_remember_me">Ingat saya</string>
+    <string name="sipeka_btn_login">Masuk ke Dashboard</string>
+    <string name="sipeka_footer">SIPEKA System • Teknik Informatika PCR</string>
+    <string name="sipeka_err_username_kosong">Username tidak boleh kosong</string>
+    <string name="sipeka_err_password_kosong">Password tidak boleh kosong</string>
+    <string name="sipeka_err_login_gagal">Username atau password salah</string>
+
+    <!-- Dashboard (data contoh) -->
+    <string name="dash_greeting">Halo, Admin SIPEKA</string>
+    <string name="dash_subtitle">Ringkasan panen hari ini (data contoh)</string>
+    <string name="dash_label_panen">TOTAL PANEN</string>
+    <string name="dash_value_panen">7 Data</string>
+    <string name="dash_label_pemanen">PEMANEN AKTIF</string>
+    <string name="dash_value_pemanen">2 Orang</string>
+    <string name="dash_label_premi">TOTAL PREMI DIBAYAR</string>
+    <string name="dash_value_premi">Rp 139.814.200</string>
+    <string name="dash_offline_title">Mode Offline</string>
+    <string name="dash_offline_desc">Data panen akan disimpan di HP saat tidak ada sinyal, lalu terkirim otomatis ketika internet kembali. (segera hadir)</string>
+
+    <!-- WebView -->
+    <string name="sipeka_web_url">https://gapki.id</string>
+    <string name="web_error_title">Halaman tidak bisa dibuka</string>
+    <string name="web_error_desc">Periksa koneksi internet, lalu coba lagi.</string>
+    <string name="web_retry">Coba lagi</string>
+
+    <!-- Tentang aplikasi -->
+    <string name="about_version">Versi 1.0</string>
+    <string name="about_desc">SIPEKA (Sistem Informasi Penggajian dan Perhitungan Premi Pemanen Sawit) membantu pemilik kebun dan pemanen menghitung upah secara otomatis, transparan, dan tetap berjalan di area minim sinyal.</string>
+    <string name="about_features_title">Fokus Fitur</string>
+    <string name="about_features">• F01 Login aman\n• F02 Input data panen harian\n• F03 Kalkulator upah otomatis\n• F04 Validasi bayar dan tanda tangan digital\n• F05 Riwayat dan rekap gaji\n• F06 Rincian premi pemanen\n• F07 Mode offline dan sinkronisasi</string>
+    <string name="about_dev_title">Pengembang</string>
+    <string name="about_dev">Tri Naldi Syaputra Siregar\nTeknik Informatika, Politeknik Caltex Riau</string>
 </resources>

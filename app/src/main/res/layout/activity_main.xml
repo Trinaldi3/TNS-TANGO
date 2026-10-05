@@ -1,46 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Halaman awal: tanpa Toolbar dan tanpa tombol back -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_light"
-    android:padding="24dp">
+    android:background="@color/sipeka_surface"
+    android:clipToPadding="false"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/main_title"
-            android:textColor="@color/text_primary"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/main_subtitle"
-            android:textColor="@color/text_secondary"
-            android:textSize="14sp" />
-
-        <Button
-            android:id="@+id/btnMyProject"
+        <!-- Header hijau: logo, judul aplikasi, tagline -->
+        <LinearLayout
+            android:id="@+id/headerMain"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/bg_button"
-            android:text="@string/btn_my_project"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_sipeka_header"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingTop="32dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="72dp">
 
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:contentDescription="@string/cd_logo"
+                android:src="@drawable/ic_sipeka_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/app_title"
+                android:textAppearance="@style/TextAppearance.SIPEKA.Title"
+                android:textColor="@color/sipeka_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/sipeka_tagline"
+                android:textColor="@color/sipeka_lime"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_sipeka_badge"
+                android:fontFamily="@font/plus_jakarta_sans_bold"
+                android:paddingStart="16dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="6dp"
+                android:text="@string/main_badge"
+                android:textColor="@color/sipeka_green_700"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Kartu sambutan + tombol menu -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-48dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="@color/sipeka_white"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="190dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/cd_petani"
+                    android:src="@drawable/img_petani" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="@string/main_welcome"
+                    android:textAppearance="@style/TextAppearance.SIPEKA.Heading"
+                    android:textColor="@color/sipeka_green_700" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="3dp"
+                    android:text="@string/main_desc"
+                    android:textAppearance="@style/TextAppearance.SIPEKA.Body"
+                    android:textColor="@color/sipeka_text_secondary" />
+
+                <!-- Big Button 1: masuk ke Login -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMainLogin"
+                    style="@style/Widget.SIPEKA.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/btn_main_login"
+                    app:icon="@drawable/ic_login" />
+
+                <!-- Big Button 2: buka halaman web (WebViewActivity) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMainWebsite"
+                    style="@style/Widget.SIPEKA.Button.Lime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/btn_main_web"
+                    app:icon="@drawable/ic_web" />
+
+                <!-- Big Button 3: tentang aplikasi -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMainAbout"
+                    style="@style/Widget.SIPEKA.Button.Outlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/btn_main_about"
+                    app:icon="@drawable/ic_info" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="@string/main_footer"
+            android:textColor="@color/sipeka_text_secondary"
+            android:textSize="12sp" />
     </LinearLayout>
-
-</RelativeLayout>
+</ScrollView>

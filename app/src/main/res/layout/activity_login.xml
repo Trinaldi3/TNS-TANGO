@@ -1,28 +1,178 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/sipeka_surface" android:fillViewport="true">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
-        <!--  Header hijau + logo  -->
-        <LinearLayout android:layout_width="match_parent" android:layout_height="260dp" android:background="@drawable/bg_sipeka_header" android:gravity="center" android:orientation="vertical" android:paddingBottom="32dp">
-            <TextView android:layout_width="72dp" android:layout_height="72dp" android:background="@drawable/bg_sipeka_logo" android:gravity="center" android:text="S" android:textColor="@color/sipeka_primary_dark" android:textSize="38sp" android:textStyle="bold"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/sipeka_app_name" android:textColor="@color/sipeka_white" android:textSize="26sp" android:textStyle="bold"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/sipeka_tagline" android:textColor="@color/sipeka_accent" android:textSize="13sp"/>
-        </LinearLayout>
-        <!--  Kartu form login  -->
-        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="20dp" android:layout_marginTop="-40dp" android:layout_marginEnd="20dp" app:cardBackgroundColor="@color/sipeka_white" app:cardCornerRadius="24dp" app:cardElevation="8dp">
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_sipeka_badge" android:paddingStart="12dp" android:paddingTop="4dp" android:paddingEnd="12dp" android:paddingBottom="4dp" android:text="@string/sipeka_secure_login" android:textColor="@color/sipeka_primary" android:textSize="11sp" android:textStyle="bold"/>
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="@string/sipeka_welcome_title" android:textColor="@color/sipeka_primary_dark" android:textSize="28sp" android:textStyle="bold"/>
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/sipeka_welcome_desc" android:textColor="@color/sipeka_text_secondary" android:textSize="14sp"/>
-                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilUsername" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:hint="@string/sipeka_hint_username" app:boxCornerRadiusBottomEnd="14dp" app:boxCornerRadiusBottomStart="14dp" app:boxCornerRadiusTopEnd="14dp" app:boxCornerRadiusTopStart="14dp" app:startIconDrawable="@android:drawable/ic_menu_myplaces">
-                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etUsername" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress" android:singleLine="true"/>
-                </com.google.android.material.textfield.TextInputLayout>
-                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilPassword" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:hint="@string/sipeka_hint_password" app:boxCornerRadiusBottomEnd="14dp" app:boxCornerRadiusBottomStart="14dp" app:boxCornerRadiusTopEnd="14dp" app:boxCornerRadiusTopStart="14dp" app:endIconMode="password_toggle" app:startIconDrawable="@android:drawable/ic_lock_idle_lock">
-                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPassword" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" android:singleLine="true"/>
-                </com.google.android.material.textfield.TextInputLayout>
-                <CheckBox android:id="@+id/cbIngat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/sipeka_remember_me" android:textColor="@color/sipeka_text_secondary"/>
-                <!--  Big Button (NF01: High Contrast & Big Button)  -->
-                <com.google.android.material.button.MaterialButton android:id="@+id/btnLogin" android:layout_width="match_parent" android:layout_height="58dp" android:layout_marginTop="16dp" android:text="@string/sipeka_btn_login" android:textAllCaps="false" android:textSize="16sp" android:textStyle="bold" app:backgroundTint="@color/sipeka_primary_dark" app:cornerRadius="16dp"/>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sipeka_surface"
+    android:orientation="vertical">
+
+    <!-- Toolbar + tombol back -->
+    <include layout="@layout/include_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header hijau + logo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@drawable/bg_sipeka_header"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="32dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:contentDescription="@string/cd_logo"
+                    android:src="@drawable/ic_sipeka_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/sipeka_app_name"
+                    android:textAppearance="@style/TextAppearance.SIPEKA.Heading"
+                    android:textColor="@color/sipeka_white"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/sipeka_tagline"
+                    android:textColor="@color/sipeka_lime"
+                    android:textSize="13sp" />
             </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" android:gravity="center" android:text="@string/sipeka_footer" android:textColor="@color/sipeka_text_secondary" android:textSize="12sp"/>
-    </LinearLayout>
-</ScrollView>
+
+            <!-- Kartu form login -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-40dp"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="@color/sipeka_white"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_sipeka_badge"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:paddingStart="12dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="4dp"
+                        android:text="@string/sipeka_secure_login"
+                        android:textColor="@color/sipeka_green_500"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/sipeka_welcome_title"
+                        android:textAppearance="@style/TextAppearance.SIPEKA.Heading"
+                        android:textColor="@color/sipeka_green_700"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/sipeka_welcome_desc"
+                        android:textAppearance="@style/TextAppearance.SIPEKA.Body"
+                        android:textColor="@color/sipeka_text_secondary" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilUsername"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/sipeka_hint_username"
+                        app:boxCornerRadiusBottomEnd="14dp"
+                        app:boxCornerRadiusBottomStart="14dp"
+                        app:boxCornerRadiusTopEnd="14dp"
+                        app:boxCornerRadiusTopStart="14dp"
+                        app:startIconDrawable="@android:drawable/ic_menu_myplaces">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etUsername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPassword"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/sipeka_hint_password"
+                        app:boxCornerRadiusBottomEnd="14dp"
+                        app:boxCornerRadiusBottomStart="14dp"
+                        app:boxCornerRadiusTopEnd="14dp"
+                        app:boxCornerRadiusTopStart="14dp"
+                        app:endIconMode="password_toggle"
+                        app:startIconDrawable="@android:drawable/ic_lock_idle_lock">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <CheckBox
+                        android:id="@+id/cbIngat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/sipeka_remember_me"
+                        android:textColor="@color/sipeka_text_secondary" />
+
+                    <!-- Big Button (NF01: High Contrast dan Big Button) -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnLogin"
+                        style="@style/Widget.SIPEKA.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/sipeka_btn_login" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:text="@string/sipeka_footer"
+                android:textColor="@color/sipeka_text_secondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

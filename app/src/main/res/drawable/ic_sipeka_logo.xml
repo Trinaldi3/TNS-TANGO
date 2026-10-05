@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Logo SIPEKA: tunas sawit + koin Rp -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="108dp"
-    android:height="108dp"
-    android:viewportWidth="108"
-    android:viewportHeight="108">
-    <group android:scaleX="0.62" android:scaleY="0.62" android:translateX="16.8" android:translateY="15.9">
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <path
+        android:fillColor="#063D30"
+        android:strokeColor="#0F7A5C"
+        android:strokeWidth="5"
+        android:pathData="M32.5,2.5 H87.5 A30,30 0 0 1 117.5,32.5 V87.5 A30,30 0 0 1 87.5,117.5 H32.5 A30,30 0 0 1 2.5,87.5 V32.5 A30,30 0 0 1 32.5,2.5 Z" />
     <path android:fillColor="#B6F23C" android:pathData="M60,16 Q76,34 60,58 Q44,34 60,16Z" />
     <path android:fillColor="#8FD43A" android:pathData="M57,60 Q28,60 20,34 Q50,28 57,60Z" />
     <path android:fillColor="#6FBF3A" android:pathData="M63,60 Q92,60 100,34 Q70,28 63,60Z" />
     <path android:fillColor="#F59E0B" android:strokeColor="#FACC15" android:strokeWidth="3" android:pathData="M41,88 a19,19 0 1,0 38,0 a19,19 0 1,0 -38,0" />
     <group android:translateX="48.67" android:translateY="92.7">
         <path android:fillColor="#063D30" android:pathData="M1.22 0V-12.67H5.93Q7.23 -12.67 8.22 -12.2Q9.21 -11.73 9.78 -10.84Q10.34 -9.95 10.34 -8.67Q10.34 -7.36 9.72 -6.44Q9.1 -5.53 8.04 -5.08L10.95 0H8.33L5.22 -5.56L6.72 -4.68H3.54V0ZM3.54 -6.72H5.97Q6.6 -6.72 7.05 -6.96Q7.51 -7.21 7.77 -7.65Q8.02 -8.09 8.02 -8.67Q8.02 -9.27 7.77 -9.7Q7.51 -10.13 7.05 -10.38Q6.6 -10.62 5.97 -10.62H3.54ZM12.27 3.4V-9.25H14.37V-7.41L14.16 -7.87Q14.64 -8.62 15.45 -9.04Q16.27 -9.45 17.34 -9.45Q18.65 -9.45 19.7 -8.81Q20.76 -8.16 21.38 -7.07Q22 -5.98 22 -4.62Q22 -3.28 21.39 -2.18Q20.77 -1.07 19.72 -0.43Q18.67 0.2 17.32 0.2Q16.32 0.2 15.48 -0.2Q14.64 -0.6 14.14 -1.34L14.5 -1.79V3.4ZM17.07 -1.84Q17.83 -1.84 18.43 -2.19Q19.02 -2.55 19.35 -3.18Q19.69 -3.81 19.69 -4.62Q19.69 -5.44 19.35 -6.06Q19.02 -6.68 18.43 -7.05Q17.83 -7.41 17.07 -7.41Q16.34 -7.41 15.75 -7.06Q15.16 -6.7 14.83 -6.06Q14.5 -5.42 14.5 -4.62Q14.5 -3.81 14.83 -3.18Q15.16 -2.55 15.75 -2.19Q16.34 -1.84 17.07 -1.84Z" />
-    </group>
     </group>
 </vector>

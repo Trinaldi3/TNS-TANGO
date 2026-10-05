@@ -1,10 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary_color">#E53935</color>
-    <color name="primary_dark">#C62828</color>
-    <color name="accent_color">#FFB300</color>
-    <color name="background_light">#F8F9FA</color>
-    <color name="card_background">#FFFFFF</color>
-    <color name="text_primary">#212121</color>
-    <color name="text_secondary">#757575</color>
+    <!-- ============ COLOR PALETTE SIPEKA (sesuai grand design) ============ -->
+
+    <!-- GREEN (utama): header, tombol, ikon aktif -->
+    <color name="sipeka_green_50">#E8F5EF</color>
+    <color name="sipeka_green_100">#C6E8D8</color>
+    <color name="sipeka_green_200">#94D3B5</color>
+    <color name="sipeka_green_300">#5DBB91</color>
+    <color name="sipeka_green_400">#2E9E6E</color>
+    <color name="sipeka_green_500">#0F7A5C</color>
+    <color name="sipeka_green_600">#0A5A44</color>
+    <color name="sipeka_green_700">#063D30</color>
+
+    <!-- YELLOW: sorotan dan peringatan -->
+    <color name="sipeka_yellow_50">#FFFBEB</color>
+    <color name="sipeka_yellow_100">#FEF3C7</color>
+    <color name="sipeka_yellow_200">#FDE68A</color>
+    <color name="sipeka_yellow_300">#FCD34D</color>
+    <color name="sipeka_yellow_400">#FACC15</color>
+    <color name="sipeka_yellow_500">#F59E0B</color>
+    <color name="sipeka_yellow_600">#D97706</color>
+    <color name="sipeka_yellow_700">#B45309</color>
+
+    <!-- NEUTRAL: teks, garis, latar -->
+    <color name="sipeka_neutral_50">#F8FAF9</color>
+    <color name="sipeka_neutral_100">#F1F4F2</color>
+    <color name="sipeka_neutral_200">#E2E8E4</color>
+    <color name="sipeka_neutral_300">#CBD5CF</color>
+    <color name="sipeka_neutral_400">#9AA8A2</color>
+    <color name="sipeka_neutral_500">#6B7A75</color>
+    <color name="sipeka_neutral_600">#4B5A55</color>
+    <color name="sipeka_neutral_700">#1F2937</color>
+
+    <!-- RED: denda, error, bahaya -->
+    <color name="sipeka_red_50">#FEF2F2</color>
+    <color name="sipeka_red_100">#FEE2E2</color>
+    <color name="sipeka_red_200">#FECACA</color>
+    <color name="sipeka_red_300">#FCA5A5</color>
+    <color name="sipeka_red_400">#F87171</color>
+    <color name="sipeka_red_500">#DC2626</color>
+    <color name="sipeka_red_600">#B91C1C</color>
+    <color name="sipeka_red_700">#7F1D1D</color>
+
+    <!-- SECONDARY (BLUE): info, sinkron, offline -->
+    <color name="sipeka_blue_50">#F0F9FF</color>
+    <color name="sipeka_blue_100">#E0F2FE</color>
+    <color name="sipeka_blue_200">#BAE6FD</color>
+    <color name="sipeka_blue_300">#7DD3FC</color>
+    <color name="sipeka_blue_400">#38BDF8</color>
+    <color name="sipeka_blue_500">#0284C7</color>
+    <color name="sipeka_blue_600">#0369A1</color>
+    <color name="sipeka_blue_700">#075985</color>
+
+    <!-- Highlight brand: teks di atas lime wajib gelap -->
+    <color name="sipeka_lime">#B6F23C</color>
+    <color name="sipeka_white">#FFFFFF</color>
+    <color name="sipeka_surface">#F4FBF6</color>
+
+    <!-- Alias semantik (dipakai layout lama dan baru) -->
+    <color name="sipeka_primary_dark">@color/sipeka_green_700</color>
+    <color name="sipeka_primary">@color/sipeka_green_500</color>
+    <color name="sipeka_accent">@color/sipeka_lime</color>
+    <color name="sipeka_text_primary">@color/sipeka_neutral_700</color>
+    <color name="sipeka_text_secondary">@color/sipeka_neutral_500</color>
+    <color name="sipeka_badge_bg">@color/sipeka_green_100</color>
 </resources>
