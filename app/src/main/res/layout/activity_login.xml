@@ -42,6 +42,9 @@
                     android:layout_marginTop="10dp"
                     android:text="@string/sipeka_app_name"
                     android:textAppearance="@style/TextAppearance.SIPEKA.Heading"
+                    android:fontFamily="@font/plus_jakarta_sans_bold"
+                    app:fontFamily="@font/plus_jakarta_sans_bold"
+                    android:textStyle="bold"
                     android:textColor="@color/sipeka_white"
                     android:textSize="26sp" />
 
@@ -50,6 +53,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/inter_medium"
+                    app:fontFamily="@font/inter_medium"
                     android:text="@string/sipeka_tagline"
                     android:textColor="@color/sipeka_lime"
                     android:textSize="13sp" />
@@ -77,6 +81,8 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_sipeka_badge"
                         android:fontFamily="@font/plus_jakarta_sans_bold"
+                        app:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:textStyle="bold"
                         android:paddingStart="12dp"
                         android:paddingTop="4dp"
                         android:paddingEnd="12dp"
@@ -91,6 +97,9 @@
                         android:layout_marginTop="14dp"
                         android:text="@string/sipeka_welcome_title"
                         android:textAppearance="@style/TextAppearance.SIPEKA.Heading"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        app:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:textStyle="bold"
                         android:textColor="@color/sipeka_green_700"
                         android:textSize="26sp" />
 
@@ -100,6 +109,8 @@
                         android:layout_marginTop="6dp"
                         android:text="@string/sipeka_welcome_desc"
                         android:textAppearance="@style/TextAppearance.SIPEKA.Body"
+                        android:fontFamily="@font/inter"
+                        app:fontFamily="@font/inter"
                         android:textColor="@color/sipeka_text_secondary" />
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -160,7 +171,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="@string/sipeka_btn_login" />
+                        android:text="@string/sipeka_btn_login"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        app:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

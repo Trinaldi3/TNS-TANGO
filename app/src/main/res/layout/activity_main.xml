@@ -39,13 +39,17 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/app_title"
                 android:textAppearance="@style/TextAppearance.SIPEKA.Title"
-                android:textColor="@color/sipeka_white" />
+                android:textColor="@color/sipeka_white"
+                android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                app:fontFamily="@font/plus_jakarta_sans_extrabold"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/inter_medium"
+                app:fontFamily="@font/inter_medium"
                 android:text="@string/sipeka_tagline"
                 android:textColor="@color/sipeka_lime"
                 android:textSize="14sp" />
@@ -56,6 +60,8 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bg_sipeka_badge"
                 android:fontFamily="@font/plus_jakarta_sans_bold"
+                app:fontFamily="@font/plus_jakarta_sans_bold"
+                android:textStyle="bold"
                 android:paddingStart="16dp"
                 android:paddingTop="6dp"
                 android:paddingEnd="16dp"
@@ -97,6 +103,9 @@
                     android:gravity="center"
                     android:text="@string/main_welcome"
                     android:textAppearance="@style/TextAppearance.SIPEKA.Heading"
+                    android:fontFamily="@font/plus_jakarta_sans_bold"
+                    app:fontFamily="@font/plus_jakarta_sans_bold"
+                    android:textStyle="bold"
                     android:textColor="@color/sipeka_green_700" />
 
                 <TextView
@@ -107,6 +116,8 @@
                     android:lineSpacingExtra="3dp"
                     android:text="@string/main_desc"
                     android:textAppearance="@style/TextAppearance.SIPEKA.Body"
+                    android:fontFamily="@font/inter"
+                    app:fontFamily="@font/inter"
                     android:textColor="@color/sipeka_text_secondary" />
 
                 <!-- Big Button 1: masuk ke Login -->
@@ -117,6 +128,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:text="@string/btn_main_login"
+                    android:fontFamily="@font/plus_jakarta_sans_bold"
+                    app:fontFamily="@font/plus_jakarta_sans_bold"
+                    android:textStyle="bold"
                     app:icon="@drawable/ic_login" />
 
                 <!-- Big Button 2: buka halaman web (WebViewActivity) -->
@@ -127,6 +141,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="@string/btn_main_web"
+                    android:fontFamily="@font/plus_jakarta_sans_bold"
+                    app:fontFamily="@font/plus_jakarta_sans_bold"
+                    android:textStyle="bold"
                     app:icon="@drawable/ic_web" />
 
                 <!-- Big Button 3: tentang aplikasi -->
@@ -137,6 +154,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="@string/btn_main_about"
+                    android:fontFamily="@font/plus_jakarta_sans_bold"
+                    app:fontFamily="@font/plus_jakarta_sans_bold"
+                    android:textStyle="bold"
                     app:icon="@drawable/ic_info" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

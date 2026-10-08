@@ -25,6 +25,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/dash_greeting"
                 android:textAppearance="@style/TextAppearance.SIPEKA.Heading"
+                android:fontFamily="@font/plus_jakarta_sans_bold"
+                app:fontFamily="@font/plus_jakarta_sans_bold"
+                android:textStyle="bold"
                 android:textColor="@color/sipeka_green_700" />
 
             <TextView
@@ -33,6 +36,8 @@
                 android:layout_marginTop="4dp"
                 android:text="@string/dash_subtitle"
                 android:textAppearance="@style/TextAppearance.SIPEKA.Body"
+                android:fontFamily="@font/inter"
+                app:fontFamily="@font/inter"
                 android:textColor="@color/sipeka_text_secondary" />
 
             <!-- Kartu 1: total panen (hijau tua) -->
@@ -54,6 +59,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/plus_jakarta_sans_bold"
+                        app:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:textStyle="bold"
                         android:text="@string/dash_label_panen"
                         android:textColor="@color/sipeka_green_200"
                         android:textSize="12sp" />
@@ -63,6 +70,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                        app:fontFamily="@font/plus_jakarta_sans_extrabold"
+                        android:textStyle="bold"
                         android:text="@string/dash_value_panen"
                         android:textColor="@color/sipeka_white"
                         android:textSize="30sp" />
@@ -88,6 +97,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/plus_jakarta_sans_bold"
+                        app:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:textStyle="bold"
                         android:text="@string/dash_label_pemanen"
                         android:textColor="@color/sipeka_text_secondary"
                         android:textSize="12sp" />
@@ -97,6 +108,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                        app:fontFamily="@font/plus_jakarta_sans_extrabold"
+                        android:textStyle="bold"
                         android:text="@string/dash_value_pemanen"
                         android:textColor="@color/sipeka_green_700"
                         android:textSize="30sp" />
@@ -122,6 +135,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/plus_jakarta_sans_bold"
+                        app:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:textStyle="bold"
                         android:text="@string/dash_label_premi"
                         android:textColor="@color/sipeka_green_700"
                         android:textSize="12sp" />
@@ -131,6 +146,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                        app:fontFamily="@font/plus_jakarta_sans_extrabold"
+                        android:textStyle="bold"
                         android:text="@string/dash_value_premi"
                         android:textColor="@color/sipeka_green_700"
                         android:textSize="30sp" />
@@ -158,6 +175,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/plus_jakarta_sans_bold"
+                        app:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:textStyle="bold"
                         android:text="@string/dash_offline_title"
                         android:textColor="@color/sipeka_blue_700"
                         android:textSize="16sp" />
@@ -169,6 +188,8 @@
                         android:lineSpacingExtra="3dp"
                         android:text="@string/dash_offline_desc"
                         android:textAppearance="@style/TextAppearance.SIPEKA.Body"
+                        android:fontFamily="@font/inter"
+                        app:fontFamily="@font/inter"
                         android:textColor="@color/sipeka_blue_700" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
