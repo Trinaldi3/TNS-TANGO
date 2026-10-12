@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- 3. Izin akses internet (dibutuhkan WebViewActivity) -->
+    <!-- Izin akses internet (dibutuhkan WebViewActivity) -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -12,21 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SIPEKA">
 
-        <!-- Halaman awal: MainActivity (tanpa Toolbar) -->
+        <!-- Halaman pertama yang dibuka: SplashActivity -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SIPEKA.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- Halaman lain: semuanya memakai Toolbar + tombol back ke MainActivity -->
+        <!-- Login (tujuan Splash jika isLogin = false). Toolbar + tombol back menutup halaman -->
         <activity
             android:name=".LoginActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:exported="false" />
+
+        <!-- Halaman awal setelah login (tanpa Toolbar). Tujuan Splash jika isLogin = true -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- Halaman lain: Toolbar + tombol back ke MainActivity -->
         <activity
             android:name=".DashboardActivity"
             android:exported="false"
@@ -37,6 +44,10 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AboutActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ProfileDeveloperActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
     </application>

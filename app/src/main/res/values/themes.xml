@@ -112,4 +112,17 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textAppearance">@style/TextAppearance.SIPEKA.Button</item>
     </style>
+
+    <!-- ===== Tombol keluar (merah = bahaya) ===== -->
+    <style name="Widget.SIPEKA.Button.Outlined.Danger">
+        <item name="strokeColor">@color/sipeka_red_500</item>
+        <item name="android:textColor">@color/sipeka_red_600</item>
+        <item name="iconTint">@color/sipeka_red_600</item>
+    </style>
+
+    <!-- ===== Tema Splash: latar hijau tua sejak awal ===== -->
+    <style name="Theme.SIPEKA.Splash" parent="Theme.SIPEKA">
+        <item name="android:windowBackground">@color/sipeka_green_700</item>
+        <item name="android:colorBackground">@color/sipeka_green_700</item>
+    </style>
 </resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Splash screen: latar hijau tua, logo, judul, petani, dan loading -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootSplash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sipeka_green_700">
+
+    <!-- Lingkaran dekorasi di belakang petani -->
+    <View
+        android:layout_width="380dp"
+        android:layout_height="380dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="-120dp"
+        android:background="@drawable/bg_splash_circle" />
+
+    <!-- Logo, judul aplikasi, tagline -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="72dp">
+
+        <ImageView
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:contentDescription="@string/cd_logo"
+            android:src="@drawable/ic_sipeka_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/plus_jakarta_sans_extrabold"
+            android:text="@string/app_title"
+            android:textAppearance="@style/TextAppearance.SIPEKA.Title"
+            android:textColor="@color/sipeka_white"
+            android:textStyle="bold"
+            app:fontFamily="@font/plus_jakarta_sans_extrabold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/sipeka_tagline"
+            android:textColor="@color/sipeka_lime"
+            android:textSize="15sp"
+            app:fontFamily="@font/inter_medium" />
+    </LinearLayout>
+
+    <!-- Petani + loading di bagian bawah -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="28dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/cd_petani"
+            android:src="@drawable/img_petani" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:indeterminate="true"
+            app:indicatorColor="@color/sipeka_lime"
+            app:trackColor="@color/sipeka_green_500"
+            app:trackCornerRadius="4dp"
+            app:trackThickness="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/splash_loading"
+            android:textColor="@color/sipeka_green_100"
+            android:textSize="13sp"
+            app:fontFamily="@font/inter" />
+    </LinearLayout>
+</FrameLayout>

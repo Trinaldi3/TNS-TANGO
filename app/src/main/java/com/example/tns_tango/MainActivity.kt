@@ -4,19 +4,29 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tns_tango.databinding.ActivityMainBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 /**
- * Halaman awal SIPEKA Mobile.
+ * Halaman awal SIPEKA Mobile (menu utama setelah login).
  * Sesuai ketentuan: halaman awal TIDAK memakai Toolbar dan tombol back.
  * File: app/src/main/java/com/example/tns_tango/MainActivity.kt
  */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var session: SessionManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableSipekaEdgeToEdge()
+
+        session = SessionManager(this)
+
+        // Pengaman: kalau belum login, kembali ke halaman Login
+        if (!session.isLoggedIn()) {
+            goToLogin()
+            return
+        }
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -25,12 +35,16 @@ class MainActivity : AppCompatActivity() {
         binding.headerMain.applySystemBarInsets(top = true)
         binding.scrollMain.applySystemBarInsets(bottom = true)
 
-        // Tombol 1: ke halaman Login
-        binding.btnMainLogin.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+        // Sapaan memakai username yang disimpan di SharedPreferences
+        val name = session.getUsername().replaceFirstChar { it.uppercase() }
+        binding.tvGreeting.text = getString(R.string.main_hello, name)
+
+        // Tombol 1: Dashboard
+        binding.btnMainDashboard.setOnClickListener {
+            startActivity(Intent(this, DashboardActivity::class.java))
         }
 
-        // Tombol 2 (baru): buka halaman web terkait topik sawit lewat WebViewActivity
+        // Tombol 2: halaman web terkait topik sawit (WebViewActivity)
         binding.btnMainWebsite.setOnClickListener {
             startActivity(
                 WebViewActivity.newIntent(
@@ -41,9 +55,36 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
-        // Tombol 3: tentang aplikasi
+        // Tombol 3 (baru): profil developer
+        binding.btnMainProfile.setOnClickListener {
+            startActivity(Intent(this, ProfileDeveloperActivity::class.java))
+        }
+
+        // Tombol 4: tentang aplikasi
         binding.btnMainAbout.setOnClickListener {
             startActivity(Intent(this, AboutActivity::class.java))
         }
+
+        // Tombol 5: keluar (hapus isLogin)
+        binding.btnMainLogout.setOnClickListener { showLogoutDialog() }
+    }
+
+    private fun showLogoutDialog() {
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.logout_title)
+            .setMessage(R.string.logout_message)
+            .setNegativeButton(R.string.logout_cancel, null)
+            .setPositiveButton(R.string.logout_confirm) { _, _ ->
+                session.logout()
+                goToLogin()
+            }
+            .show()
+    }
+
+    private fun goToLogin() {
+        val intent = Intent(this, LoginActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+        startActivity(intent)
     }
 }

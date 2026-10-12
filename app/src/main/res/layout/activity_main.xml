@@ -2,6 +2,7 @@
 <!-- Halaman awal: tanpa Toolbar dan tanpa tombol back -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -97,9 +98,26 @@
                     android:src="@drawable/img_petani" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/tvGreeting"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_sipeka_badge"
+                    android:fontFamily="@font/plus_jakarta_sans_bold"
+                    android:paddingStart="14dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/sipeka_green_700"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/plus_jakarta_sans_bold"
+                    tools:text="Halo, Admin!" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="@string/main_welcome"
                     android:textAppearance="@style/TextAppearance.SIPEKA.Heading"
@@ -120,44 +138,70 @@
                     app:fontFamily="@font/inter"
                     android:textColor="@color/sipeka_text_secondary" />
 
-                <!-- Big Button 1: masuk ke Login -->
+                <!-- Big Button 1: Dashboard -->
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnMainLogin"
+                    android:id="@+id/btnMainDashboard"
                     style="@style/Widget.SIPEKA.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
-                    android:text="@string/btn_main_login"
                     android:fontFamily="@font/plus_jakarta_sans_bold"
-                    app:fontFamily="@font/plus_jakarta_sans_bold"
+                    android:text="@string/btn_main_dashboard"
                     android:textStyle="bold"
-                    app:icon="@drawable/ic_login" />
+                    app:fontFamily="@font/plus_jakarta_sans_bold"
+                    app:icon="@drawable/ic_dashboard" />
 
-                <!-- Big Button 2: buka halaman web (WebViewActivity) -->
+                <!-- Big Button 2: halaman web (WebViewActivity) -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnMainWebsite"
                     style="@style/Widget.SIPEKA.Button.Lime"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="@string/btn_main_web"
                     android:fontFamily="@font/plus_jakarta_sans_bold"
-                    app:fontFamily="@font/plus_jakarta_sans_bold"
+                    android:text="@string/btn_main_web"
                     android:textStyle="bold"
+                    app:fontFamily="@font/plus_jakarta_sans_bold"
                     app:icon="@drawable/ic_web" />
 
-                <!-- Big Button 3: tentang aplikasi -->
+                <!-- Big Button 3: profil developer -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMainProfile"
+                    style="@style/Widget.SIPEKA.Button.Outlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/plus_jakarta_sans_bold"
+                    android:text="@string/btn_main_profile"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/plus_jakarta_sans_bold"
+                    app:icon="@drawable/ic_person" />
+
+                <!-- Big Button 4: tentang aplikasi -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnMainAbout"
                     style="@style/Widget.SIPEKA.Button.Outlined"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="@string/btn_main_about"
                     android:fontFamily="@font/plus_jakarta_sans_bold"
-                    app:fontFamily="@font/plus_jakarta_sans_bold"
+                    android:text="@string/btn_main_about"
                     android:textStyle="bold"
+                    app:fontFamily="@font/plus_jakarta_sans_bold"
                     app:icon="@drawable/ic_info" />
+
+                <!-- Big Button 5: keluar (hapus isLogin) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMainLogout"
+                    style="@style/Widget.SIPEKA.Button.Outlined.Danger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/plus_jakarta_sans_bold"
+                    android:text="@string/btn_main_logout"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/plus_jakarta_sans_bold"
+                    app:icon="@drawable/ic_logout" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
