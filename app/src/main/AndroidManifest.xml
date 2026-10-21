@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Izin akses internet (dibutuhkan WebViewActivity) -->
+    <!-- Izin akses internet (dibutuhkan WebsiteFragment) -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,7 +14,7 @@
 
         <!-- Halaman pertama yang dibuka: SplashActivity -->
         <activity
-            android:name=".SplashActivity"
+            android:name=".feature.splash.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.SIPEKA.Splash">
             <intent-filter>
@@ -25,30 +25,13 @@
 
         <!-- Login (tujuan Splash jika isLogin = false). Toolbar + tombol back menutup halaman -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".feature.auth.LoginActivity"
             android:exported="false" />
 
-        <!-- Halaman awal setelah login (tanpa Toolbar). Tujuan Splash jika isLogin = true -->
+        <!-- Halaman utama (tanpa Toolbar): tempat Bottom Navigation + 5 Fragment.
+             Tujuan Splash jika isLogin = true dan tujuan setelah login berhasil -->
         <activity
-            android:name=".MainActivity"
+            android:name=".feature.main.MainActivity"
             android:exported="false" />
-
-        <!-- Halaman lain: Toolbar + tombol back ke MainActivity -->
-        <activity
-            android:name=".DashboardActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".WebViewActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".AboutActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".ProfileDeveloperActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
     </application>
 </manifest>
