@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fitur Website Sawit (WebView) -->
+<resources>
+    <string name="title_web">Website Sawit</string>
+    <string name="sipeka_web_url">https://gapki.id</string>
+    <string name="web_error_title">Halaman tidak bisa dibuka</string>
+    <string name="web_error_desc">Periksa koneksi internet, lalu coba lagi.</string>
+    <string name="web_retry">Coba lagi</string>
+</resources>

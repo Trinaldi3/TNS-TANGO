@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Tab Website: header hijau + indikator loading + WebView (atau layar error) -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/rootWebView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sipeka_surface"
     android:orientation="vertical">
 
-    <!-- Toolbar + tombol back (menutup WebView, kembali ke Activity sebelumnya) -->
-    <include layout="@layout/include_toolbar" />
+    <include
+        android:id="@+id/pageHeader"
+        layout="@layout/include_page_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <!-- Indikator loading halaman -->
     <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -27,7 +30,7 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <!-- 1. Komponen WebView -->
+        <!-- Komponen WebView -->
         <WebView
             android:id="@+id/webView"
             android:layout_width="match_parent"
@@ -47,18 +50,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/plus_jakarta_sans_bold"
                 android:text="@string/web_error_title"
-                android:textAppearance="@style/TextAppearance.SIPEKA.Heading"
-                android:textColor="@color/sipeka_red_500" />
+                android:textColor="@color/sipeka_red_500"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/plus_jakarta_sans_bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter"
                 android:gravity="center"
                 android:text="@string/web_error_desc"
-                android:textAppearance="@style/TextAppearance.SIPEKA.Body"
-                android:textColor="@color/sipeka_text_secondary" />
+                android:textColor="@color/sipeka_text_secondary"
+                android:textSize="14sp"
+                app:fontFamily="@font/inter" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRetry"
@@ -66,9 +74,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                android:fontFamily="@font/plus_jakarta_sans_bold"
                 android:paddingStart="32dp"
                 android:paddingEnd="32dp"
-                android:text="@string/web_retry" />
+                android:text="@string/web_retry"
+                android:textStyle="bold"
+                app:fontFamily="@font/plus_jakarta_sans_bold" />
         </LinearLayout>
     </FrameLayout>
 </LinearLayout>
