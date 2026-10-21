@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fitur Profil Developer. Data diambil apa adanya dari strings.xml lama (sudah diisi Tri) -->
+<resources>
+    <string name="title_profile">Profil Developer</string>
+
+    <!-- ================= Profil Developer =================
+         GANTI data bertanda (GANTI) dengan data milikmu sendiri. -->
+    <string name="dev_initials">TN</string>
+    <string name="dev_name">Tri Naldi Syaputra Siregar</string>
+    <string name="dev_role">Mahasiswa Teknik Informatika</string>
+    <string name="dev_nim">NIM 2455301238</string>
+    <string name="dev_campus">Politeknik Caltex Riau</string>
+    <string name="dev_about_title">Tentang Saya</string>
+    <string name="dev_about">Mahasiswa Teknik Informatika yang mengerjakan SIPEKA, sistem penggajian dan premi pemanen sawit (Laravel + React), dan sekarang membangun versi Android-nya dengan Kotlin.</string>
+    <string name="dev_hobby_title">Hobi</string>
+    <string name="dev_hobby_1">Watch Movie</string>
+    <string name="dev_hobby_2">Develop app</string>
+    <string name="dev_hobby_3">Joging</string>
+    <string name="dev_strength_title">Kekuatan Terbesar</string>
+    <string name="dev_strength">Cepat belajar hal baru dan menuntaskan project dari desain sampai kode.</string>
+    <string name="dev_social_title">Sosial Media</string>
+    <string name="dev_github_label">GitHub</string>
+    <string name="dev_github_value">github.com/Trinaldi3</string>
+    <string name="dev_github_url">https://github.com/Trinaldi3</string>
+    <string name="dev_instagram_label">Instagram </string>
+    <string name="dev_instagram_value">......</string>
+    <string name="dev_instagram_url">https://instagram.com/....</string>
+    <string name="dev_linkedin_label">LinkedIn </string>
+    <string name="dev_linkedin_value">linkedin.com/in/Tri Naldi Syaputra Siregar</string>
+    <string name="dev_linkedin_url">https://linkedin.com/in/Tri Naldi Syaputra Siregar</string>
+    <string name="dev_email_label">Email </string>
+    <string name="dev_email">naldi24ti@mahasiswa.pcr.ac.id</string>
+    <string name="dev_link_error">Tidak ada aplikasi untuk membuka tautan ini</string>
+</resources>

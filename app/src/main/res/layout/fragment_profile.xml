@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Tab Profil: header hijau + profil developer + tombol Keluar -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/rootProfile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sipeka_surface"
     android:orientation="vertical">
 
-    <!-- Toolbar + tombol back -->
-    <include layout="@layout/include_toolbar" />
+    <include
+        android:id="@+id/pageHeader"
+        layout="@layout/include_page_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -417,6 +420,19 @@
                     </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tombol Keluar (merah = bahaya): hapus isLogin lalu kembali ke Login -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                style="@style/Widget.SIPEKA.Button.Outlined.Danger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/plus_jakarta_sans_bold"
+                android:text="@string/btn_logout"
+                android:textStyle="bold"
+                app:fontFamily="@font/plus_jakarta_sans_bold"
+                app:icon="@drawable/ic_logout" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
