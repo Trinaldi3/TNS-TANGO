@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fitur Tentang SIPEKA -->
+<resources>
+    <string name="title_about">Tentang SIPEKA</string>
+    <string name="about_version">Versi 1.0</string>
+    <string name="about_desc">SIPEKA (Sistem Informasi Penggajian dan Perhitungan Premi Pemanen Sawit) membantu pemilik kebun dan pemanen menghitung upah secara otomatis, transparan, dan tetap berjalan di area minim sinyal.</string>
+    <string name="about_features_title">Fokus Fitur</string>
+    <string name="about_features">• F01 Login aman\n• F02 Input data panen harian\n• F03 Kalkulator upah otomatis\n• F04 Validasi bayar dan tanda tangan digital\n• F05 Riwayat dan rekap gaji\n• F06 Rincian premi pemanen\n• F07 Mode offline dan sinkronisasi</string>
+    <string name="about_dev_title">Pengembang</string>
+    <string name="about_dev">Tri Naldi Syaputra Siregar\nTeknik Informatika, Politeknik Caltex Riau</string>
+</resources>
