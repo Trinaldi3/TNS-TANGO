@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Toolbar bersama: dipakai Login, Dashboard, Website, dan Tentang (bukan MainActivity) -->
+<!-- Toolbar bersama: dipakai LoginActivity (bukan MainActivity dan bukan Fragment) -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/appbarContainer"
     android:layout_width="match_parent"

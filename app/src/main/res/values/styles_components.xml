@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Style komponen baru: Bottom Navigation, Chip filter, Badge. Tema dan tombol tetap di themes.xml -->
+<resources>
+    <!-- Label menu Bottom Navigation: keterangan 12sp (Inter) -->
+    <style name="TextAppearance.SIPEKA.NavLabel" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- Label menu yang sedang aktif: lebih tebal -->
+    <style name="TextAppearance.SIPEKA.NavLabel.Active">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="fontFamily">@font/inter_bold</item>
+    </style>
+
+    <!-- Bottom Navigation: latar putih, ikon + label selalu terlihat (bahasa sederhana) -->
+    <style name="Widget.SIPEKA.BottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="backgroundTint">@color/sipeka_white</item>
+        <item name="elevation">8dp</item>
+        <item name="itemIconTint">@color/sipeka_nav_item</item>
+        <item name="itemTextColor">@color/sipeka_nav_item</item>
+        <item name="itemRippleColor">@color/sipeka_green_100</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.SIPEKA.NavLabel.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.SIPEKA.NavLabel</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <!-- Teks chip filter -->
+    <style name="TextAppearance.SIPEKA.Chip" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- Chip filter (pilih satu): hijau saat dipilih -->
+    <style name="Widget.SIPEKA.Chip.Filter" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/sipeka_chip_bg</item>
+        <item name="android:textColor">@color/sipeka_chip_text</item>
+        <item name="android:textAppearance">@style/TextAppearance.SIPEKA.Chip</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="chipMinHeight">44dp</item>
+        <item name="rippleColor">@color/sipeka_green_100</item>
+    </style>
+
+    <!-- Teks badge status: Bold 12sp (Plus Jakarta Sans) -->
+    <style name="TextAppearance.SIPEKA.Badge" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/plus_jakarta_sans_bold</item>
+        <item name="fontFamily">@font/plus_jakarta_sans_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+</resources>

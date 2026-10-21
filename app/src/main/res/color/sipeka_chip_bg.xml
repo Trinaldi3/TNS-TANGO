@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Latar chip filter: dipilih = Green 500, belum dipilih = Neutral 200 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/sipeka_green_500" android:state_checked="true" />
+    <item android:color="@color/sipeka_neutral_200" />
+</selector>

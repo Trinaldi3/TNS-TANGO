@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Badge BELUM DIBAYAR: Yellow 400, sudut penuh, teks gelap -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/sipeka_yellow_400" />
+    <corners android:radius="50dp" />
+</shape>
