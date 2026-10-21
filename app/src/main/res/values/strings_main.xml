@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Label 5 menu Bottom Navigation (lihat res/menu/menu_bottom_nav.xml) -->
+<resources>
+    <string name="nav_dashboard">Beranda</string>
+    <string name="nav_riwayat">Riwayat</string>
+    <string name="nav_website">Website</string>
+    <string name="nav_about">Tentang</string>
+    <string name="nav_profile">Profil</string>
+</resources>

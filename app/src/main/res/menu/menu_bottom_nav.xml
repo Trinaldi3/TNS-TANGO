@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 5 menu Bottom Navigation. Id di sini dipetakan ke Fragment oleh feature/main/MainTab.kt -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dashboard"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/nav_dashboard" />
+    <item
+        android:id="@+id/nav_riwayat"
+        android:icon="@drawable/ic_history"
+        android:title="@string/nav_riwayat" />
+    <item
+        android:id="@+id/nav_website"
+        android:icon="@drawable/ic_web"
+        android:title="@string/nav_website" />
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/ic_info"
+        android:title="@string/nav_about" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_person"
+        android:title="@string/nav_profile" />
+</menu>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fitur Login (UC01) dan Keluar -->
+<resources>
+    <string name="title_login">Login SIPEKA</string>
+    <string name="sipeka_secure_login">🔒 Secure Login Access</string>
+    <string name="sipeka_welcome_title">Selamat Datang\nAdmin SIPEKA</string>
+    <string name="sipeka_welcome_desc">Masukkan username dan password untuk mengakses dashboard sistem payroll.</string>
+    <string name="sipeka_hint_username">Username / Email</string>
+    <string name="sipeka_hint_password">Password</string>
+    <string name="sipeka_btn_login">Masuk</string>
+    <string name="sipeka_footer">SIPEKA System • Teknik Informatika PCR</string>
+    <string name="sipeka_err_username_kosong">Username tidak boleh kosong</string>
+    <string name="sipeka_err_password_kosong">Password tidak boleh kosong</string>
+    <string name="sipeka_err_login_gagal">Username atau password salah</string>
+    <string name="sipeka_login_berhasil">Login berhasil</string>
+
+    <!-- Keluar (logout), dipakai ProfileFragment -->
+    <string name="btn_logout">Keluar</string>
+    <string name="logout_title">Keluar dari SIPEKA?</string>
+    <string name="logout_message">Kamu perlu login lagi untuk membuka aplikasi.</string>
+    <string name="logout_confirm">Keluar</string>
+    <string name="logout_cancel">Batal</string>
+</resources>

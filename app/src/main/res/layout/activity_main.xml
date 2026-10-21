@@ -1,218 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Halaman awal: tanpa Toolbar dan tanpa tombol back -->
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Halaman utama: tanpa Toolbar. Atas = tempat Fragment, bawah = Bottom Navigation -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sipeka_surface"
-    android:clipToPadding="false"
-    android:fillViewport="true">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <!-- Tempat Fragment ditampilkan (diisi oleh MainActivity.showTab) -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Garis tipis pemisah, warna Neutral 200 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sipeka_neutral_200" />
+
+    <!-- 5 menu: Beranda, Riwayat, Website, Tentang, Profil -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        style="@style/Widget.SIPEKA.BottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <!-- Header hijau: logo, judul aplikasi, tagline -->
-        <LinearLayout
-            android:id="@+id/headerMain"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_sipeka_header"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:paddingStart="24dp"
-            android:paddingTop="32dp"
-            android:paddingEnd="24dp"
-            android:paddingBottom="72dp">
-
-            <ImageView
-                android:layout_width="96dp"
-                android:layout_height="96dp"
-                android:contentDescription="@string/cd_logo"
-                android:src="@drawable/ic_sipeka_logo" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/app_title"
-                android:textAppearance="@style/TextAppearance.SIPEKA.Title"
-                android:textColor="@color/sipeka_white"
-                android:fontFamily="@font/plus_jakarta_sans_extrabold"
-                app:fontFamily="@font/plus_jakarta_sans_extrabold"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/inter_medium"
-                app:fontFamily="@font/inter_medium"
-                android:text="@string/sipeka_tagline"
-                android:textColor="@color/sipeka_lime"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/bg_sipeka_badge"
-                android:fontFamily="@font/plus_jakarta_sans_bold"
-                app:fontFamily="@font/plus_jakarta_sans_bold"
-                android:textStyle="bold"
-                android:paddingStart="16dp"
-                android:paddingTop="6dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="6dp"
-                android:text="@string/main_badge"
-                android:textColor="@color/sipeka_green_700"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <!-- Kartu sambutan + tombol menu -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="-48dp"
-            android:layout_marginEnd="20dp"
-            app:cardBackgroundColor="@color/sipeka_white"
-            app:cardCornerRadius="28dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="vertical"
-                android:padding="24dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="190dp"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="@string/cd_petani"
-                    android:src="@drawable/img_petani" />
-
-                <TextView
-                    android:id="@+id/tvGreeting"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:background="@drawable/bg_sipeka_badge"
-                    android:fontFamily="@font/plus_jakarta_sans_bold"
-                    android:paddingStart="14dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="14dp"
-                    android:paddingBottom="4dp"
-                    android:textColor="@color/sipeka_green_700"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/plus_jakarta_sans_bold"
-                    tools:text="Halo, Admin!" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:text="@string/main_welcome"
-                    android:textAppearance="@style/TextAppearance.SIPEKA.Heading"
-                    android:fontFamily="@font/plus_jakarta_sans_bold"
-                    app:fontFamily="@font/plus_jakarta_sans_bold"
-                    android:textStyle="bold"
-                    android:textColor="@color/sipeka_green_700" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:lineSpacingExtra="3dp"
-                    android:text="@string/main_desc"
-                    android:textAppearance="@style/TextAppearance.SIPEKA.Body"
-                    android:fontFamily="@font/inter"
-                    app:fontFamily="@font/inter"
-                    android:textColor="@color/sipeka_text_secondary" />
-
-                <!-- Big Button 1: Dashboard -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnMainDashboard"
-                    style="@style/Widget.SIPEKA.Button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:fontFamily="@font/plus_jakarta_sans_bold"
-                    android:text="@string/btn_main_dashboard"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/plus_jakarta_sans_bold"
-                    app:icon="@drawable/ic_dashboard" />
-
-                <!-- Big Button 2: halaman web (WebViewActivity) -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnMainWebsite"
-                    style="@style/Widget.SIPEKA.Button.Lime"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/plus_jakarta_sans_bold"
-                    android:text="@string/btn_main_web"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/plus_jakarta_sans_bold"
-                    app:icon="@drawable/ic_web" />
-
-                <!-- Big Button 3: profil developer -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnMainProfile"
-                    style="@style/Widget.SIPEKA.Button.Outlined"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/plus_jakarta_sans_bold"
-                    android:text="@string/btn_main_profile"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/plus_jakarta_sans_bold"
-                    app:icon="@drawable/ic_person" />
-
-                <!-- Big Button 4: tentang aplikasi -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnMainAbout"
-                    style="@style/Widget.SIPEKA.Button.Outlined"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/plus_jakarta_sans_bold"
-                    android:text="@string/btn_main_about"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/plus_jakarta_sans_bold"
-                    app:icon="@drawable/ic_info" />
-
-                <!-- Big Button 5: keluar (hapus isLogin) -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnMainLogout"
-                    style="@style/Widget.SIPEKA.Button.Outlined.Danger"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/plus_jakarta_sans_bold"
-                    android:text="@string/btn_main_logout"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/plus_jakarta_sans_bold"
-                    app:icon="@drawable/ic_logout" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
-            android:gravity="center"
-            android:text="@string/main_footer"
-            android:textColor="@color/sipeka_text_secondary"
-            android:textSize="12sp" />
-    </LinearLayout>
-</ScrollView>
+        app:menu="@menu/menu_bottom_nav" />
+</LinearLayout>
