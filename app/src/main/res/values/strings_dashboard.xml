@@ -2,6 +2,7 @@
 <!-- Fitur Dashboard / Beranda (data contoh) -->
 <resources>
     <string name="dash_hello">Halo, %1$s!</string>
+    <string name="dash_btn_input_panen">Input Panen</string>
     <string name="dash_subtitle">Ringkasan panen hari ini (data contoh)</string>
     <string name="dash_label_panen">TOTAL PANEN</string>
     <string name="dash_value_panen">7 Data</string>

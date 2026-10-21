@@ -66,6 +66,19 @@
             android:orientation="vertical"
             android:padding="20dp">
 
+            <!-- Tombol besar: buka form Input Panen (Lime = sorotan) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnInputPanen"
+                style="@style/Widget.SIPEKA.Button.Lime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/plus_jakarta_sans_bold"
+                android:text="@string/dash_btn_input_panen"
+                android:textStyle="bold"
+                app:fontFamily="@font/plus_jakarta_sans_bold"
+                app:icon="@drawable/ic_add" />
+
             <!-- Kartu 1: total panen (hijau tua) -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"

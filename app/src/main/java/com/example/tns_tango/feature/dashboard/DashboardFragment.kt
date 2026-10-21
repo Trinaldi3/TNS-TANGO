@@ -1,5 +1,6 @@
 package com.example.tns_tango.feature.dashboard
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import com.example.tns_tango.R
 import com.example.tns_tango.core.session.SessionManager
 import com.example.tns_tango.core.ui.applySystemBarInsets
 import com.example.tns_tango.databinding.FragmentDashboardBinding
+import com.example.tns_tango.feature.panen.InputPanenActivity
 
 /**
  * Tab 1 "Beranda": ringkasan panen (masih data contoh).
@@ -18,6 +20,7 @@ import com.example.tns_tango.databinding.FragmentDashboardBinding
  * Alur kode:
  * onCreateView (inflate FragmentDashboardBinding) -> onViewCreated -> showGreeting()
  *   showGreeting(): SessionManager.getUsername() -> teks "Halo, <Nama>!"
+ * onViewCreated -> setupInputPanenButton() -> btnInputPanen diklik -> InputPanenActivity
  */
 class DashboardFragment : Fragment() {
 
@@ -40,6 +43,14 @@ class DashboardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.headerDashboard.applySystemBarInsets(top = true)
         showGreeting()
+        setupInputPanenButton()
+    }
+
+    /** Tombol "Input Panen" membuka form InputPanenActivity (halaman dengan Toolbar + tombol back). */
+    private fun setupInputPanenButton() {
+        binding.btnInputPanen.setOnClickListener {
+            startActivity(Intent(requireContext(), InputPanenActivity::class.java))
+        }
     }
 
     /** Sapaan memakai username yang disimpan di SharedPreferences (huruf pertama dibesarkan). */
