@@ -1,4 +1,4 @@
-package com.example.tns_tango
+package com.example.tns_tango.feature.auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,16 +6,22 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.tns_tango.R
+import com.example.tns_tango.core.session.SessionManager
+import com.example.tns_tango.core.ui.applySystemBarInsets
+import com.example.tns_tango.core.ui.enableSipekaEdgeToEdge
+import com.example.tns_tango.core.ui.setupSipekaToolbar
+import com.example.tns_tango.feature.main.MainActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 /**
  * Halaman Login (UC01).
- * File: app/src/main/java/com/example/tns_tango/LoginActivity.kt
+ * File: app/src/main/java/com/example/tns_tango/feature/auth/LoginActivity.kt
  *
  * Alur kode:
  * btnLogin diklik -> attemptLogin() -> validateInput() -> isCredentialValid()
- *   - benar -> onLoginSuccess(): SessionManager.saveLogin() (isLogin = true) -> MainActivity
+ *   - benar -> onLoginSuccess(): SessionManager.saveLogin() (isLogin = true) -> MainActivity (tab Dashboard)
  *   - salah -> onLoginFailed(): pesan error
  */
 class LoginActivity : AppCompatActivity() {
@@ -27,6 +33,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var btnLogin: Button
     private lateinit var session: SessionManager
 
+    /** Pasang layout, Toolbar, lalu sambungkan tombol Masuk ke attemptLogin(). */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableSipekaEdgeToEdge()
@@ -60,7 +67,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    /** Langkah 2: input tidak boleh kosong. */
+    /** Langkah 2: input tidak boleh kosong. Pesan error tampil di bawah kolom yang kosong. */
     private fun validateInput(username: String, password: String): Boolean {
         tilUsername.error =
             if (username.isEmpty()) getString(R.string.sipeka_err_username_kosong) else null
@@ -78,7 +85,7 @@ class LoginActivity : AppCompatActivity() {
         return username.equals(VALID_USERNAME, ignoreCase = true) && password == VALID_PASSWORD
     }
 
-    /** Langkah 4a: berhasil -> simpan isLogin = true lalu buka MainActivity. */
+    /** Langkah 4a: berhasil -> simpan isLogin = true lalu buka MainActivity (langsung tab Dashboard). */
     private fun onLoginSuccess() {
         session.saveLogin(VALID_USERNAME)
         Toast.makeText(this, R.string.sipeka_login_berhasil, Toast.LENGTH_SHORT).show()

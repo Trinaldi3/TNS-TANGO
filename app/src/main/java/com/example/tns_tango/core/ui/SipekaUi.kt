@@ -1,4 +1,4 @@
-package com.example.tns_tango
+package com.example.tns_tango.core.ui
 
 import android.graphics.Color
 import android.view.View
@@ -9,20 +9,33 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
+import com.example.tns_tango.R
 import com.google.android.material.appbar.MaterialToolbar
 
 /**
- * Helper UI bersama untuk semua Activity SIPEKA.
- * File: app/src/main/java/com/example/tns_tango/SipekaUi.kt
+ * Helper UI bersama untuk semua Activity dan Fragment SIPEKA.
+ * File: app/src/main/java/com/example/tns_tango/core/ui/SipekaUi.kt
+ *
+ * Dipakai oleh: SplashActivity, LoginActivity, MainActivity (enableSipekaEdgeToEdge, applySystemBarInsets),
+ * LoginActivity (setupSipekaToolbar), dan semua Fragment (applySystemBarInsets pada header).
  */
 
-/** Tampilan edge-to-edge dengan ikon status bar terang (latar header hijau tua). */
+/**
+ * Tampilan edge-to-edge dengan ikon status bar terang (latar header hijau tua).
+ * Panggil di awal onCreate(), sebelum setContentView().
+ */
 fun ComponentActivity.enableSipekaEdgeToEdge() {
     enableEdgeToEdge(statusBarStyle = SystemBarStyle.dark(Color.TRANSPARENT))
 }
 
-/** Tambah padding setinggi status bar / navigation bar supaya konten tidak tertutup. */
+/**
+ * Tambah padding setinggi status bar / navigation bar supaya konten tidak tertutup.
+ *
+ * @param top    true = tambah padding atas setinggi status bar (untuk header hijau)
+ * @param bottom true = tambah padding bawah setinggi navigation bar (untuk Bottom Navigation)
+ */
 fun View.applySystemBarInsets(top: Boolean = false, bottom: Boolean = false) {
+    // Simpan padding asli dari XML supaya tidak menumpuk tiap kali insets berubah
     val startTop = paddingTop
     val startBottom = paddingBottom
     ViewCompat.setOnApplyWindowInsetsListener(this) { v, insets ->
@@ -39,11 +52,12 @@ fun View.applySystemBarInsets(top: Boolean = false, bottom: Boolean = false) {
 
 /**
  * Pasang Toolbar SIPEKA (layout include_toolbar.xml) beserta tombol back.
- * Panggil SETELAH setContentView().
+ * Panggil SETELAH setContentView(). Sekarang hanya dipakai LoginActivity,
+ * karena halaman lain sudah menjadi Fragment di dalam bottom navigation.
  *
- * @param title   judul Toolbar untuk halaman ini
+ * @param title    judul Toolbar untuk halaman ini
  * @param showBack tampilkan tombol back (false hanya untuk halaman awal)
- * @param onBack  aksi khusus tombol back; default kembali ke Activity sebelumnya
+ * @param onBack   aksi khusus tombol back; default kembali ke Activity sebelumnya
  */
 fun AppCompatActivity.setupSipekaToolbar(
     title: CharSequence,
