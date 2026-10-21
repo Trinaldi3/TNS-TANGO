@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fitur Riwayat Gaji (data contoh) -->
+<resources>
+    <string name="title_riwayat">Riwayat Gaji</string>
+    <string name="riwayat_note">Data contoh. Nanti terhubung ke Room DB dan server.</string>
+    <string name="riwayat_filter_semua">Semua</string>
+    <string name="riwayat_filter_validasi">Tervalidasi</string>
+    <string name="riwayat_filter_belum">Belum dibayar</string>
+    <string name="riwayat_empty">Belum ada data untuk status ini</string>
+    <string name="riwayat_berat_format">%1$d kg</string>
+    <string name="badge_tervalidasi">TERVALIDASI</string>
+    <string name="badge_belum_dibayar">BELUM DIBAYAR</string>
+</resources>
