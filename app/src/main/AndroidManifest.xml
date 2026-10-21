@@ -33,5 +33,13 @@
         <activity
             android:name=".feature.main.MainActivity"
             android:exported="false" />
+
+        <!-- Form Input Panen (dibuka dari tombol di Dashboard). Toolbar + tombol back.
+             Dikunci potret supaya tanda tangan tidak hilang saat layar diputar -->
+        <activity
+            android:name=".feature.panen.InputPanenActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 </manifest>

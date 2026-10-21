@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fitur Input Panen: form, hitung upah otomatis, tanda tangan -->
+<resources>
+    <string name="title_input_panen">Input Panen</string>
+
+    <!-- Kartu data panen -->
+    <string name="panen_section_data">DATA PANEN</string>
+    <string name="panen_hint_nama">Nama pemanen</string>
+    <string name="panen_hint_berat">Berat buah (kg)</string>
+    <string name="panen_label_lahan">Jenis lahan</string>
+    <string name="panen_lahan_datar">Datar</string>
+    <string name="panen_lahan_sulit">Sulit</string>
+    <string name="panen_hint_janjang">Janjang mentah (kena denda)</string>
+
+    <!-- Kartu hasil hitung -->
+    <string name="panen_section_hasil">HASIL HITUNG OTOMATIS</string>
+    <string name="panen_label_kotor">Upah kotor</string>
+    <string name="panen_label_denda">Denda grading</string>
+    <string name="panen_label_bersih">UPAH BERSIH</string>
+    <string name="panen_info_tarif">Tarif %1$s per kg, lahan %2$s (koefisien %3$s), denda %4$s per janjang. Angka contoh.</string>
+
+    <!-- Kartu tanda tangan -->
+    <string name="panen_section_ttd">TANDA TANGAN PEMANEN</string>
+    <string name="panen_ttd_hint">Tanda tangan di dalam kotak ini</string>
+    <string name="panen_btn_hapus">Hapus tanda tangan</string>
+    <string name="panen_btn_simpan">Simpan dan Validasi</string>
+
+    <!-- Pesan error -->
+    <string name="panen_err_nama">Nama pemanen tidak boleh kosong</string>
+    <string name="panen_err_berat">Berat harus lebih dari 0 kg</string>
+    <string name="panen_err_ttd">Tanda tangan masih kosong</string>
+    <string name="panen_save_gagal">Tanda tangan gagal disimpan</string>
+
+    <!-- Dialog hasil simpan -->
+    <string name="panen_dialog_title">Panen tersimpan</string>
+    <string name="panen_dialog_message">Pemanen: %1$s\nBerat: %2$s kg (lahan %3$s)\nUpah kotor: %4$s\nDenda: %5$s\nUpah bersih: %6$s\n\nTanda tangan sudah tersimpan di HP. Data belum masuk ke Riwayat karena database (Room) belum dibuat.</string>
+    <string name="panen_dialog_done">Selesai</string>
+    <string name="panen_dialog_again">Input lagi</string>
+</resources>
