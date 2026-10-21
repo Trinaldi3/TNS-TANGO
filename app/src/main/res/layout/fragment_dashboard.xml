@@ -1,13 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Tab Beranda: header hijau (logo + sapaan) lalu kartu ringkasan panen -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/rootDashboard"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sipeka_surface"
     android:orientation="vertical">
 
-    <include layout="@layout/include_toolbar" />
+    <!-- Header hijau: logo, sapaan memakai username dari SharedPreferences -->
+    <LinearLayout
+        android:id="@+id/headerDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_page_header"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="24dp">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:contentDescription="@string/cd_logo"
+            android:src="@drawable/ic_sipeka_logo" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                android:textColor="@color/sipeka_white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/plus_jakarta_sans_extrabold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/dash_subtitle"
+                android:textColor="@color/sipeka_lime"
+                android:textSize="13sp"
+                app:fontFamily="@font/inter_medium" />
+        </LinearLayout>
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -20,31 +66,11 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dash_greeting"
-                android:textAppearance="@style/TextAppearance.SIPEKA.Heading"
-                android:fontFamily="@font/plus_jakarta_sans_bold"
-                app:fontFamily="@font/plus_jakarta_sans_bold"
-                android:textStyle="bold"
-                android:textColor="@color/sipeka_green_700" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@string/dash_subtitle"
-                android:textAppearance="@style/TextAppearance.SIPEKA.Body"
-                android:fontFamily="@font/inter"
-                app:fontFamily="@font/inter"
-                android:textColor="@color/sipeka_text_secondary" />
-
             <!-- Kartu 1: total panen (hijau tua) -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="0dp"
                 app:cardBackgroundColor="@color/sipeka_green_700"
                 app:cardCornerRadius="24dp"
                 app:cardElevation="4dp">

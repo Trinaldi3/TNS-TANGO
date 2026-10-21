@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fitur Dashboard / Beranda (data contoh) -->
+<resources>
+    <string name="dash_hello">Halo, %1$s!</string>
+    <string name="dash_subtitle">Ringkasan panen hari ini (data contoh)</string>
+    <string name="dash_label_panen">TOTAL PANEN</string>
+    <string name="dash_value_panen">7 Data</string>
+    <string name="dash_label_pemanen">PEMANEN AKTIF</string>
+    <string name="dash_value_pemanen">2 Orang</string>
+    <string name="dash_label_premi">TOTAL PREMI DIBAYAR</string>
+    <string name="dash_value_premi">Rp 139.814.200</string>
+    <string name="dash_offline_title">Mode Offline</string>
+    <string name="dash_offline_desc">Data panen akan disimpan di HP saat tidak ada sinyal, lalu terkirim otomatis ketika internet kembali. (segera hadir)</string>
+</resources>
