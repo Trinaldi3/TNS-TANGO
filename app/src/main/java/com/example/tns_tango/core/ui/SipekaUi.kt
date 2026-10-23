@@ -17,7 +17,8 @@ import com.google.android.material.appbar.MaterialToolbar
  * File: app/src/main/java/com/example/tns_tango/core/ui/SipekaUi.kt
  *
  * Dipakai oleh: SplashActivity, LoginActivity, MainActivity (enableSipekaEdgeToEdge, applySystemBarInsets),
- * LoginActivity (setupSipekaToolbar), dan semua Fragment (applySystemBarInsets pada header).
+ * LoginActivity dan halaman form (setupSipekaToolbar), halaman form (applyBottomInsetsWithIme),
+ * dan semua Fragment (applySystemBarInsets pada header).
  */
 
 /**
@@ -46,6 +47,21 @@ fun View.applySystemBarInsets(top: Boolean = false, bottom: Boolean = false) {
             top = if (top) startTop + bars.top else startTop,
             bottom = if (bottom) startBottom + bars.bottom else startBottom
         )
+        insets
+    }
+}
+
+/**
+ * Padding bawah mengikuti navigation bar atau keyboard (mana yang lebih tinggi),
+ * supaya kolom form tidak tertutup keyboard. Dipakai halaman form (Register With Gmail,
+ * Registrasi).
+ */
+fun View.applyBottomInsetsWithIme() {
+    val startBottom = paddingBottom
+    ViewCompat.setOnApplyWindowInsetsListener(this) { v, insets ->
+        val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+        val ime = insets.getInsets(WindowInsetsCompat.Type.ime())
+        v.updatePadding(bottom = startBottom + maxOf(bars.bottom, ime.bottom))
         insets
     }
 }

@@ -28,6 +28,20 @@
             android:name=".feature.auth.LoginActivity"
             android:exported="false" />
 
+        <!-- Register With Gmail: halaman input email, Registrasi, dan Registrasi Berhasil.
+             Semua memakai Toolbar + tombol back -->
+        <activity
+            android:name=".feature.auth.EmailInputActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".feature.auth.RegisterActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".feature.auth.RegisterSuccessActivity"
+            android:exported="false" />
+
         <!-- Halaman utama (tanpa Toolbar): tempat Bottom Navigation + 5 Fragment.
              Tujuan Splash jika isLogin = true dan tujuan setelah login berhasil -->
         <activity

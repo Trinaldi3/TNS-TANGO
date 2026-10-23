@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fitur Register With Gmail, Registrasi, dan Registrasi Berhasil -->
+<resources>
+    <!-- Tombol di halaman Login -->
+    <string name="login_atau">atau</string>
+    <string name="login_btn_register_gmail">Register With Gmail</string>
+    <string name="login_dialog_title">Login gagal</string>
+    <string name="dialog_ok">OK</string>
+
+    <!-- Halaman input email -->
+    <string name="title_email_input">Register With Gmail</string>
+    <string name="email_heading">Daftar dengan Gmail</string>
+    <string name="email_desc">Masukkan alamat Gmail kamu. Email ini akan otomatis terisi di halaman registrasi.</string>
+    <string name="email_hint">Email Gmail</string>
+    <string name="email_btn_lanjut">Lanjut</string>
+    <string name="email_dialog_title">Email tidak valid</string>
+    <string name="email_err_kosong">Email tidak boleh kosong</string>
+    <string name="email_err_bukan_gmail">Email harus menggunakan domain @gmail.com</string>
+    <string name="email_err_format">Format email tidak valid. Contoh: nama@gmail.com</string>
+
+    <!-- Halaman registrasi -->
+    <string name="title_register">Registrasi</string>
+    <string name="reg_hint_nama">Nama</string>
+    <string name="reg_hint_email">Email (dari Gmail)</string>
+    <string name="reg_hint_username">Username</string>
+    <string name="reg_hint_password">Password</string>
+    <string name="reg_helper_username">Tanpa spasi</string>
+    <string name="reg_helper_password">Minimal 6 karakter</string>
+    <string name="reg_btn_register">Registrasi</string>
+    <string name="reg_err_wajib">Wajib diisi</string>
+    <string name="reg_err_username_spasi">Username tidak boleh mengandung spasi</string>
+    <string name="reg_err_password_pendek">Password minimal 6 karakter</string>
+
+    <!-- Halaman registrasi berhasil -->
+    <string name="title_register_success">Registrasi Berhasil</string>
+    <string name="success_heading">Registrasi Berhasil</string>
+    <string name="success_desc">Akun kamu sudah tersimpan. Silakan login dengan username dan password yang baru dibuat.</string>
+    <string name="success_label_nama">Nama</string>
+    <string name="success_label_email">Email</string>
+    <string name="success_label_username">Username</string>
+    <string name="success_btn_login">Ke Halaman Login</string>
+</resources>

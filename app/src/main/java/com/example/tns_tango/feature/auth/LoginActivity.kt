@@ -7,22 +7,29 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tns_tango.R
+import com.example.tns_tango.core.session.RegistrationStore
 import com.example.tns_tango.core.session.SessionManager
 import com.example.tns_tango.core.ui.applySystemBarInsets
 import com.example.tns_tango.core.ui.enableSipekaEdgeToEdge
 import com.example.tns_tango.core.ui.setupSipekaToolbar
 import com.example.tns_tango.feature.main.MainActivity
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 /**
- * Halaman Login (UC01).
+ * Halaman Login (UC01) dengan tombol Register With Gmail.
  * File: app/src/main/java/com/example/tns_tango/feature/auth/LoginActivity.kt
  *
  * Alur kode:
  * btnLogin diklik -> attemptLogin() -> validateInput() -> isCredentialValid()
- *   - benar -> onLoginSuccess(): SessionManager.saveLogin() (isLogin = true) -> MainActivity (tab Dashboard)
- *   - salah -> onLoginFailed(): pesan error
+ *   - benar -> onLoginSuccess(): SessionManager.saveLogin() (isLogin = true) -> MainActivity (Home)
+ *   - salah -> onLoginFailed(): MaterialAlertDialog
+ * btnRegisterGmail diklik -> EmailInputActivity (lihat EmailInputActivity.kt)
+ *
+ * Aturan login: boleh masuk jika salah satu terpenuhi:
+ * 1. username == password
+ * 2. username dan password sama dengan data registrasi di SharedPreferences
  */
 class LoginActivity : AppCompatActivity() {
 
@@ -31,9 +38,11 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var etUsername: TextInputEditText
     private lateinit var etPassword: TextInputEditText
     private lateinit var btnLogin: Button
+    private lateinit var btnRegisterGmail: Button
     private lateinit var session: SessionManager
+    private lateinit var registrationStore: RegistrationStore
 
-    /** Pasang layout, Toolbar, lalu sambungkan tombol Masuk ke attemptLogin(). */
+    /** Pasang layout dan Toolbar, sambungkan tombol Masuk dan Register With Gmail, isi username jika dikirim. */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableSipekaEdgeToEdge()
@@ -44,13 +53,24 @@ class LoginActivity : AppCompatActivity() {
         findViewById<View>(R.id.rootLogin).applySystemBarInsets(bottom = true)
 
         session = SessionManager(this)
+        registrationStore = RegistrationStore(this)
         tilUsername = findViewById(R.id.tilUsername)
         tilPassword = findViewById(R.id.tilPassword)
         etUsername = findViewById(R.id.etUsername)
         etPassword = findViewById(R.id.etPassword)
         btnLogin = findViewById(R.id.btnLogin)
+        btnRegisterGmail = findViewById(R.id.btnRegisterGmail)
+
+        // Setelah registrasi berhasil, username terisi otomatis
+        intent.getStringExtra(EXTRA_USERNAME)?.let { etUsername.setText(it) }
 
         btnLogin.setOnClickListener { attemptLogin() }
+        btnRegisterGmail.setOnClickListener { openRegisterWithGmail() }
+    }
+
+    /** Buka halaman input email (langkah pertama Register With Gmail). */
+    private fun openRegisterWithGmail() {
+        startActivity(Intent(this, EmailInputActivity::class.java))
     }
 
     /** Langkah 1: ambil teks dari form, lalu validasi dan cek kredensial. */
@@ -61,7 +81,7 @@ class LoginActivity : AppCompatActivity() {
         if (!validateInput(username, password)) return
 
         if (isCredentialValid(username, password)) {
-            onLoginSuccess()
+            onLoginSuccess(username)
         } else {
             onLoginFailed()
         }
@@ -77,17 +97,22 @@ class LoginActivity : AppCompatActivity() {
     }
 
     /**
-     * Langkah 3: cek username dan password.
-     * Username: huruf besar/kecil diabaikan. Password: harus sama persis.
-     * TODO: ganti dengan request ke API Laravel (Retrofit) di pertemuan berikutnya.
+     * Langkah 3: cek login. Lolos jika salah satu kondisi terpenuhi:
+     * 1. username sama dengan password
+     * 2. username dan password cocok dengan data registrasi di SharedPreferences
      */
     private fun isCredentialValid(username: String, password: String): Boolean {
-        return username.equals(VALID_USERNAME, ignoreCase = true) && password == VALID_PASSWORD
+        val sameAsPassword = username == password
+        val matchesRegistration = registrationStore.isMatch(username, password)
+        return sameAsPassword || matchesRegistration
     }
 
-    /** Langkah 4a: berhasil -> simpan isLogin = true lalu buka MainActivity (langsung tab Dashboard). */
-    private fun onLoginSuccess() {
-        session.saveLogin(VALID_USERNAME)
+    /**
+     * Langkah 4a: berhasil -> simpan isLogin = true lalu buka MainActivity (Home).
+     * @param username username yang dipakai login (tampil di sapaan Beranda)
+     */
+    private fun onLoginSuccess(username: String) {
+        session.saveLogin(username)
         Toast.makeText(this, R.string.sipeka_login_berhasil, Toast.LENGTH_SHORT).show()
 
         val intent = Intent(this, MainActivity::class.java).apply {
@@ -97,14 +122,17 @@ class LoginActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    /** Langkah 4b: gagal -> tampilkan pesan, isLogin tidak disimpan. */
+    /** Langkah 4b: gagal -> tampilkan MaterialAlertDialog, isLogin tidak disimpan. */
     private fun onLoginFailed() {
-        tilPassword.error = getString(R.string.sipeka_err_login_gagal)
-        Toast.makeText(this, R.string.sipeka_err_login_gagal, Toast.LENGTH_SHORT).show()
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.login_dialog_title)
+            .setMessage(R.string.sipeka_err_login_gagal)
+            .setPositiveButton(R.string.dialog_ok, null)
+            .show()
     }
 
     companion object {
-        private const val VALID_USERNAME = "admin"
-        private const val VALID_PASSWORD = "admin123"
+        /** Kunci Intent extra: username yang diisi otomatis setelah registrasi. */
+        const val EXTRA_USERNAME = "extra_username"
     }
 }

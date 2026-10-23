@@ -167,6 +167,31 @@
                         android:fontFamily="@font/plus_jakarta_sans_bold"
                         app:fontFamily="@font/plus_jakarta_sans_bold"
                         android:textStyle="bold" />
+
+                    <!-- Pemisah "atau" antara Masuk dan Register -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/inter_medium"
+                        app:fontFamily="@font/inter_medium"
+                        android:gravity="center"
+                        android:text="@string/login_atau"
+                        android:textColor="@color/sipeka_text_secondary"
+                        android:textSize="13sp" />
+
+                    <!-- Register With Gmail: tombol biasa (garis Green 500) -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRegisterGmail"
+                        style="@style/Widget.SIPEKA.Button.Outlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        app:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:text="@string/login_btn_register_gmail"
+                        android:textStyle="bold"
+                        app:icon="@drawable/ic_mail" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Halaman informasi "Registrasi Berhasil" -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sipeka_surface"
+    android:orientation="vertical">
+
+    <!-- Toolbar + tombol back -->
+    <include layout="@layout/include_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="24dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_check_circle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/plus_jakarta_sans_extrabold"
+                android:text="@string/success_heading"
+                android:textColor="@color/sipeka_green_700"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/plus_jakarta_sans_extrabold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter"
+                android:gravity="center"
+                android:text="@string/success_desc"
+                android:textColor="@color/sipeka_text_secondary"
+                android:textSize="14sp"
+                app:fontFamily="@font/inter" />
+
+            <!-- Ringkasan data (password tidak ditampilkan) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@color/sipeka_white"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:text="@string/success_label_nama"
+                        android:textColor="@color/sipeka_green_500"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/plus_jakarta_sans_bold" />
+
+                    <TextView
+                        android:id="@+id/tvNama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:textColor="@color/sipeka_green_700"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/plus_jakarta_sans_bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:text="@string/success_label_email"
+                        android:textColor="@color/sipeka_green_500"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/plus_jakarta_sans_bold" />
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:textColor="@color/sipeka_green_700"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/inter_medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:text="@string/success_label_username"
+                        android:textColor="@color/sipeka_green_500"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/plus_jakarta_sans_bold" />
+
+                    <TextView
+                        android:id="@+id/tvUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/inter_medium"
+                        android:textColor="@color/sipeka_green_700"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/inter_medium" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Big Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnKeLogin"
+                style="@style/Widget.SIPEKA.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/plus_jakarta_sans_bold"
+                android:text="@string/success_btn_login"
+                android:textStyle="bold"
+                app:fontFamily="@font/plus_jakarta_sans_bold" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
