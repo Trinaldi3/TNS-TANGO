@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+
     <!-- Izin akses internet (dibutuhkan WebsiteFragment) -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -47,6 +50,17 @@
         <activity
             android:name=".feature.main.MainActivity"
             android:exported="false" />
+
+        <!-- Detail satu catatan panen dari tab Riwayat. -->
+        <activity
+            android:name=".feature.riwayat.DetailPanenActivity"
+            android:exported="false" />
+
+        <!-- Kamera dokumentasi panen. Dibuka dari form Input Panen. -->
+        <activity
+            android:name=".feature.panen.CameraPanenActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
 
         <!-- Form Input Panen (dibuka dari tombol di Dashboard). Toolbar + tombol back.
              Dikunci potret supaya tanda tangan tidak hilang saat layar diputar -->

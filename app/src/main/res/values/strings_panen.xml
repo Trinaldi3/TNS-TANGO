@@ -12,6 +12,17 @@
     <string name="panen_lahan_sulit">Sulit</string>
     <string name="panen_hint_janjang">Janjang mentah (kena denda)</string>
 
+    <!-- Dokumentasi foto panen -->
+    <string name="panen_section_foto">DOKUMENTASI FOTO PANEN</string>
+    <string name="panen_foto_deskripsi">Ambil foto hasil panen sebagai dokumentasi pendukung. Foto bersifat opsional.</string>
+    <string name="panen_btn_ambil_foto">Ambil Foto</string>
+    <string name="panen_btn_ulang_foto">Ambil Ulang Foto</string>
+    <string name="panen_btn_hapus_foto">Hapus Foto</string>
+    <string name="panen_foto_preview_desc">Pratinjau foto dokumentasi panen</string>
+    <string name="panen_foto_izin_ditolak">Izin kamera diperlukan untuk mengambil foto dokumentasi.</string>
+    <string name="panen_foto_gagal">Foto gagal diambil. Silakan coba lagi.</string>
+    <string name="panen_foto_tidak_tersedia">Foto dokumentasi tidak ditemukan.</string>
+
     <!-- Kartu hasil hitung -->
     <string name="panen_section_hasil">HASIL HITUNG OTOMATIS</string>
     <string name="panen_label_kotor">Upah kotor</string>
@@ -23,17 +34,13 @@
     <string name="panen_section_ttd">TANDA TANGAN PEMANEN</string>
     <string name="panen_ttd_hint">Tanda tangan di dalam kotak ini</string>
     <string name="panen_btn_hapus">Hapus tanda tangan</string>
-    <string name="panen_btn_simpan">Simpan dan Validasi</string>
+    <string name="panen_btn_simpan">Simpan ke Riwayat</string>
 
     <!-- Pesan error -->
     <string name="panen_err_nama">Nama pemanen tidak boleh kosong</string>
     <string name="panen_err_berat">Berat harus lebih dari 0 kg</string>
     <string name="panen_err_ttd">Tanda tangan masih kosong</string>
     <string name="panen_save_gagal">Tanda tangan gagal disimpan</string>
-
-    <!-- Dialog hasil simpan -->
-    <string name="panen_dialog_title">Panen tersimpan</string>
-    <string name="panen_dialog_message">Pemanen: %1$s\nBerat: %2$s kg (lahan %3$s)\nUpah kotor: %4$s\nDenda: %5$s\nUpah bersih: %6$s\n\nTanda tangan sudah tersimpan di HP. Data belum masuk ke Riwayat karena database (Room) belum dibuat.</string>
-    <string name="panen_dialog_done">Selesai</string>
-    <string name="panen_dialog_again">Input lagi</string>
+    <string name="panen_masuk_riwayat">Data panen berhasil disimpan ke Riwayat.</string>
+    <string name="panen_riwayat_gagal">Data panen gagal disimpan. Silakan coba lagi.</string>
 </resources>

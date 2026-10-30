@@ -150,6 +150,75 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- ============ Kartu dokumentasi foto panen ============ -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/sipeka_white"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:text="@string/panen_section_foto"
+                        android:textColor="@color/sipeka_green_500"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/plus_jakarta_sans_bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/inter"
+                        android:text="@string/panen_foto_deskripsi"
+                        android:textColor="@color/sipeka_neutral_600"
+                        android:textSize="13sp"
+                        app:fontFamily="@font/inter" />
+
+                    <ImageView
+                        android:id="@+id/ivFotoPanen"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:layout_marginTop="14dp"
+                        android:contentDescription="@string/panen_foto_preview_desc"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAmbilFoto"
+                        style="@style/Widget.SIPEKA.Button.Outlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:text="@string/panen_btn_ambil_foto"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/plus_jakarta_sans_bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnHapusFoto"
+                        style="@style/Widget.SIPEKA.Button.Outlined.Danger"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/plus_jakarta_sans_bold"
+                        android:text="@string/panen_btn_hapus_foto"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:fontFamily="@font/plus_jakarta_sans_bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
             <!-- ============ Kartu 2: hasil hitung otomatis (hijau tua, angka lime) ============ -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
