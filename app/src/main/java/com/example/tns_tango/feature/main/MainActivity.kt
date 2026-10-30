@@ -101,6 +101,13 @@ class MainActivity : AppCompatActivity() {
         currentTab = tab
     }
 
+    /** Pindah ke tab Riwayat setelah satu input panen berhasil disimpan. */
+    fun openRiwayatTab() {
+        if (::binding.isInitialized) {
+            binding.bottomNav.selectedItemId = MainTab.RIWAYAT.menuId
+        }
+    }
+
     /**
      * Aturan tombol back sistem:
      * 1. Di tab Website dan halaman web bisa mundur -> mundur satu halaman web

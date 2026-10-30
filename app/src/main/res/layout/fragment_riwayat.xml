@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Tab Riwayat: header hijau + chip filter + daftar riwayat gaji -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -13,45 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <!-- Filter status: pilih satu, selalu ada yang terpilih -->
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroupFilter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
-        app:selectionRequired="true"
-        app:singleSelection="true">
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipSemua"
-            style="@style/Widget.SIPEKA.Chip.Filter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/riwayat_filter_semua" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipTervalidasi"
-            style="@style/Widget.SIPEKA.Chip.Filter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/riwayat_filter_validasi" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipBelumDibayar"
-            style="@style/Widget.SIPEKA.Chip.Filter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/riwayat_filter_belum" />
-    </com.google.android.material.chip.ChipGroup>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/inter_medium"
         android:text="@string/riwayat_note"
@@ -74,12 +39,13 @@
             android:paddingEnd="20dp"
             android:paddingBottom="12dp" />
 
-        <!-- Tampil hanya jika hasil filter kosong -->
         <TextView
             android:id="@+id/tvEmpty"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="28dp"
             android:fontFamily="@font/inter"
             android:text="@string/riwayat_empty"
             android:textColor="@color/sipeka_text_secondary"

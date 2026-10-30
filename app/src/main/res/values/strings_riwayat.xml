@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Fitur Riwayat Gaji (data contoh) -->
 <resources>
-    <string name="title_riwayat">Riwayat Gaji</string>
-    <string name="riwayat_note">Data contoh. Nanti terhubung ke Room DB dan server.</string>
-    <string name="riwayat_filter_semua">Semua</string>
-    <string name="riwayat_filter_validasi">Tervalidasi</string>
-    <string name="riwayat_filter_belum">Belum dibayar</string>
-    <string name="riwayat_empty">Belum ada data untuk status ini</string>
-    <string name="riwayat_berat_format">%1$d kg</string>
-    <string name="badge_tervalidasi">TERVALIDASI</string>
-    <string name="badge_belum_dibayar">BELUM DIBAYAR</string>
+    <string name="title_riwayat">Riwayat Panen</string>
+    <string name="riwayat_note">Pilih catatan panen untuk melihat detail dan membuat bukti PDF.</string>
+    <string name="riwayat_empty">Belum ada data panen. Silakan lakukan Input Panen terlebih dahulu.</string>
+    <string name="riwayat_detail_title">Detail Hasil Panen</string>
+    <string name="riwayat_detail_missing">Data riwayat tidak ditemukan.</string>
+    <string name="riwayat_pdf_button">Buat / Unduh Bukti PDF</string>
+    <string name="riwayat_pdf_success">Bukti PDF berhasil disimpan.</string>
+    <string name="riwayat_pdf_failed">PDF gagal dibuat. Silakan coba lokasi lain.</string>
+    <string name="riwayat_section_info">INFORMASI PANEN</string>
+    <string name="riwayat_section_hitung">RINCIAN PERHITUNGAN</string>
+    <string name="riwayat_section_foto">DOKUMENTASI FOTO PANEN</string>
+    <string name="riwayat_section_ttd">TANDA TANGAN PEMANEN</string>
+    <string name="riwayat_label_nama">Nama pemanen</string>
+    <string name="riwayat_label_tanggal">Tanggal input</string>
+    <string name="riwayat_label_berat">Berat hasil panen</string>
+    <string name="riwayat_label_lahan">Jenis lahan</string>
+    <string name="riwayat_label_janjang">Janjang mentah</string>
+    <string name="riwayat_label_tarif">Tarif dasar</string>
+    <string name="riwayat_label_kotor">Upah kotor</string>
+    <string name="riwayat_label_denda">Denda grading</string>
+    <string name="riwayat_label_bersih">UPAH BERSIH</string>
+    <string name="riwayat_foto_tidak_ada">Tidak ada foto dokumentasi untuk input ini.</string>
+    <string name="riwayat_upah_bersih_format">UPAH BERSIH\n%1$s</string>
 </resources>

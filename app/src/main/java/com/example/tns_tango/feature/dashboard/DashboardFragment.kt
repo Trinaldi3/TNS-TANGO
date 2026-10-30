@@ -6,11 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.activity.result.contract.ActivityResultContracts
 import com.example.tns_tango.R
 import com.example.tns_tango.core.session.SessionManager
 import com.example.tns_tango.core.ui.applySystemBarInsets
 import com.example.tns_tango.databinding.FragmentDashboardBinding
 import com.example.tns_tango.feature.panen.InputPanenActivity
+import com.example.tns_tango.feature.main.MainActivity
 
 /**
  * Tab 1 "Beranda": ringkasan panen (masih data contoh).
@@ -27,6 +29,14 @@ class DashboardFragment : Fragment() {
     // Binding hanya valid antara onCreateView dan onDestroyView
     private var _binding: FragmentDashboardBinding? = null
     private val binding get() = _binding!!
+
+    private val inputPanenLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == android.app.Activity.RESULT_OK) {
+            (activity as? MainActivity)?.openRiwayatTab()
+        }
+    }
 
     /** Buat tampilan dari fragment_dashboard.xml. */
     override fun onCreateView(
@@ -49,7 +59,7 @@ class DashboardFragment : Fragment() {
     /** Tombol "Input Panen" membuka form InputPanenActivity (halaman dengan Toolbar + tombol back). */
     private fun setupInputPanenButton() {
         binding.btnInputPanen.setOnClickListener {
-            startActivity(Intent(requireContext(), InputPanenActivity::class.java))
+            inputPanenLauncher.launch(Intent(requireContext(), InputPanenActivity::class.java))
         }
     }
 

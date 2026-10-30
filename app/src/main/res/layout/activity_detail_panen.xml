@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sipeka_surface"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbarContainer"
+        layout="@layout/include_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/riwayat_section_info"
+                        android:textColor="@color/sipeka_green_500"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="@string/riwayat_label_nama" android:textColor="@color/sipeka_text_secondary" android:textSize="12sp" />
+                    <TextView android:id="@+id/tvNamaPemanen" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/sipeka_green_700" android:textSize="16sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/riwayat_label_tanggal" android:textColor="@color/sipeka_text_secondary" android:textSize="12sp" />
+                    <TextView android:id="@+id/tvTanggal" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/sipeka_neutral_700" android:textSize="14sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/riwayat_label_berat" android:textColor="@color/sipeka_text_secondary" android:textSize="12sp" />
+                    <TextView android:id="@+id/tvBerat" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/sipeka_neutral_700" android:textSize="14sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/riwayat_label_lahan" android:textColor="@color/sipeka_text_secondary" android:textSize="12sp" />
+                    <TextView android:id="@+id/tvJenisLahan" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/sipeka_neutral_700" android:textSize="14sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/riwayat_label_janjang" android:textColor="@color/sipeka_text_secondary" android:textSize="12sp" />
+                    <TextView android:id="@+id/tvJanjang" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/sipeka_neutral_700" android:textSize="14sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/riwayat_section_hitung" android:textColor="@color/sipeka_green_500" android:textSize="12sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="@string/riwayat_label_tarif" android:textColor="@color/sipeka_text_secondary" android:textSize="12sp" />
+                    <TextView android:id="@+id/tvTarif" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/sipeka_neutral_700" android:textSize="14sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/riwayat_label_kotor" android:textColor="@color/sipeka_text_secondary" android:textSize="12sp" />
+                    <TextView android:id="@+id/tvUpahKotor" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/sipeka_neutral_700" android:textSize="14sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/riwayat_label_denda" android:textColor="@color/sipeka_text_secondary" android:textSize="12sp" />
+                    <TextView android:id="@+id/tvDenda" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/sipeka_neutral_700" android:textSize="14sp" />
+                    <TextView android:id="@+id/tvUpahBersih" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@color/sipeka_green_100" android:padding="14dp" android:textColor="@color/sipeka_green_700" android:textSize="18sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/riwayat_section_foto" android:textColor="@color/sipeka_green_500" android:textSize="12sp" android:textStyle="bold" />
+            <ImageView android:id="@+id/ivFotoPanen" android:layout_width="match_parent" android:layout_height="210dp" android:layout_marginTop="10dp" android:adjustViewBounds="true" android:scaleType="centerCrop" android:visibility="gone" />
+            <TextView android:id="@+id/tvFotoKosong" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/riwayat_foto_tidak_ada" android:textColor="@color/sipeka_text_secondary" android:textSize="13sp" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/riwayat_section_ttd" android:textColor="@color/sipeka_green_500" android:textSize="12sp" android:textStyle="bold" />
+            <ImageView android:id="@+id/ivTandaTangan" android:layout_width="220dp" android:layout_height="100dp" android:layout_marginTop="10dp" android:background="@drawable/bg_signature_pad" android:padding="6dp" android:scaleType="fitCenter" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUnduhPdf"
+                style="@style/Widget.SIPEKA.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/riwayat_pdf_button" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
